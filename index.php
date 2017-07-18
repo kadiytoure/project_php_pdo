@@ -1,10 +1,14 @@
 <?php
+function myLoader($className){
+    $class = str_replace('\\', '/', $className);
+    require($class . '.php');
+}
 //include './SmallDoggo.php;'
-spl_autoload_register();
+spl_autoload_register('myLoader');
 
 use entities\SmallDoggo;
 
-echo new SmallDoggo('test', 'test', new Date(), false);
+var_dump(new SmallDoggo('test', 'test', new DateTime(), false));
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
