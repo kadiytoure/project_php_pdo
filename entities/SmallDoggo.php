@@ -12,7 +12,7 @@ private $id;
 private $name;
 private $race;
 private $birthdate;
-private $isGood;
+private $is_good;
 
 function __construct(string $name, 
         string $race, 
@@ -23,7 +23,7 @@ function __construct(string $name,
     $this->name = $name;
     $this->race = $race;
     $this->birthdate = $birthdate;
-    $this->isGood = $isGood;
+    $this->is_good = $isGood;
 }
 
 
